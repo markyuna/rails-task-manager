@@ -1,8 +1,10 @@
-<h1>Edit an existing task</h1>
+<div class="container mt-5">
+  <h1>Edit task</h1>
 
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.submit %>
-<% end %>
-<%= link_to "Edit", tasks_path %>
+  <%= render "form", task: @task %>
+
+  <hr>
+  <%= link_to tasks_path do %>
+    <i class="fa-solid fa-arrow-rotate-left"></i> Back to list
+  <% end %>
+</div>
